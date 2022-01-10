@@ -30,7 +30,7 @@ export class AppComponent {
     // {headerName:"Case Reporter", field:"case-reporter", width:120, filter: true },
     // {headerName:"Case Status", field:"case-status", width:120, filter: true }
     
-     {headerName:"ID", field:"id", width:100,
+    {headerName:"ID", field:"id", width:100,
     menuTabs: ['filterMenuTab'], filter: true },
     {headerName:"Name", field:"name", width:100, filter: true },
     {headerName:"Year", field:"year", width:100, filter: true },
@@ -40,7 +40,7 @@ export class AppComponent {
 
   constructor(private apiService: ApiServiceService)
   {
-      apiService.getJSON().subscribe(data => {
+      apiService.getProductData().subscribe(data => {
         console.log(data.data);
         this.rowData = data.data;
       });

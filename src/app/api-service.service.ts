@@ -9,7 +9,7 @@ export class ApiServiceService {
   private productUrl = 'https://reqres.in/api/products';  
   constructor(private http: HttpClient) { }
 
-  public getJSON(): Observable<any> {
+  public getProductData(): Observable<any> {
     return this.http.get(this.productUrl);
   }
 }
